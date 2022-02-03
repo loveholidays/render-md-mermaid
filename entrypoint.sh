@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-for md in $(find . -name "*.md"|sed 's/ /\\\ /g'); do /render-md-mermaid.sh "$md" in-container; done
+find . -name "*.md" -type f -exec /render-md-mermaid.sh {} in-container \;
